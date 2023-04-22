@@ -5,6 +5,10 @@ Plug 'majutsushi/tagbar'
 Plug 'windwp/nvim-autopairs'
 Plug 'vim-airline/vim-airline'
 Plug 'neovim/nvim-lspconfig'
+Plug 'github/copilot.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
 au ColorScheme * hi Normal ctermbg=none guibg=none
@@ -42,7 +46,7 @@ luafile ~/.config/nvim/plugins.lua
 augroup c_cpp
 	autocmd!
 	autocmd FileType c,cpp set shiftwidth=4 tabstop=4 noet cc=120
-	autocmd FileType c,cpp nnoremap <S-K> ggVG :py3file /opt/homebrew/Cellar/llvm/16.0.1/share/clang/clang-format.py<cr>
+	autocmd FileType c,cpp nnoremap <S-K> ggVG :py3file /opt/homebrew/Cellar/llvm/16.0.2/share/clang/clang-format.py<cr>
 augroup END
 augroup python
 	autocmd!
